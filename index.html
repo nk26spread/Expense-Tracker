@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div class="container">
+        <div class="box box1">
+          <div class="nav-menu">
+            <div id="logo">Track</div>
+            <ul class="nav-items">
+              <li>
+                <i class="ri-dashboard-fill"></i>
+                <a href="#" class="nav-link">Dashboard</a>
+              </li>
+              <li>
+                <i class="ri-add-box-line"></i>
+                <a href="#" class="nav-link">Add expenses</a>
+              </li>
+              <li>
+                <i class="ri-menu-search-line"></i>
+                <a href="#" class="nav-link">Category</a>
+              </li>
+              <li>
+                <i class="ri-pie-chart-line"></i>
+                <a href="#" class="nav-link">Analytics</a>
+              </li>
+              <li>
+                <i class="ri-settings-line"></i>
+                <a href="#" class="nav-link">Settings</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="box box2">
+          <div class="dashboard-search">
+            <h3>Expenso</h3>
+            <input type="text" placeholder="search" />
+          </div>
+          <div class="dashboard-amount">
+            <div class="dashboard-amount-box dashboard-amount__income">
+              <h4>Income</h4>
+              <strong  id="income">₹40K</strong>
+            </div>
+            <div class="dashboard-amount-box dashboard-amount__expense">
+              <h4>Expense</h4>
+              <strong  id="expenses">₹0K</strong>
+            </div>
+            <div class="dashboard-amount-box dashboard-amount__saving">
+              <h4>Saving</h4>
+              <strong  id="saving">₹0K</strong>
+            </div>
+          </div>
+          <div class="dashboard-anlytics">
+            <h3>Statistics</h3>
+            <!-- Chart.js Implementation -->
+            <div class="dashboard-anlytics__graph">
+              <canvas id="myChart"></canvas>
+            </div>
+          </div>
+          <!-- Spending amount  -->
+          <div class="dashboard-spending-input">
+            <input
+              type="number"
+              placeholder="Spending amount"
+              name="spend-amount"
+              class="expense-input-box"
+              id="spending-amount"
+              required
+            />
+            <!-- Dropdown category -->
+            <input
+              list="options"
+              id="dropdown"
+              name="dropdown-category"
+              class="expense-input-box"
+              placeholder="Choose Category"
+              required
+            />
+            <datalist id="options">
+              <option value="Housing"></option>
+              <option value="Utilities"></option>
+              <option value="Transportation"></option>
+              <option value="Food"></option>
+              <option value="Health Care"></option>
+              <option value="Debt Payment"></option>
+              <option value="Investment"></option>
+              <option value="Education"></option>
+              <option value="Clothing"></option>
+              <option value="Personal Care"></option>
+              <option value="Gift & Donation"></option>
+              <option value="Micellaneous"></option>
+            </datalist>
+
+            <!-- Add Expense Button -->
+            <button id="add-expense">Add</button>
+          </div>
+        </div>
+        <div class="box box3">
+          <div class="profile">
+            <div class="profile-notification">
+              <i class="ri-notification-line"></i>
+            </div>
+            <div class="profile-picture">
+              <span class="profile-picture__name">Naresh Kunar Sahoo</span>
+              <i class="ri-user-line"></i>
+            </div>
+          </div>
+          <div class="expense-container">
+            <div class="expense-header">
+              <h3>Transactions</h3>
+              <i class="ri-equalizer-3-line"></i>
+            </div>
+            <ul class="expense-box" id="expense-list">
+              <!-- Expense Cards will be added here dynamically -->
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>

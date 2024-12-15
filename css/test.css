@@ -1,0 +1,79 @@
+/* Base styles (for desktop and large screens) */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  
+  .box {
+    width: 30%;
+    margin: 10px;
+  }
+  
+  .nav-menu {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+  }
+  
+  .nav-items {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .nav-items li {
+    margin: 10px 0;
+  }
+  
+  .dashboard-search {
+    padding: 20px;
+    background-color: #f4f4f4;
+  }
+  
+  .dashboard-amount {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+  }
+  
+  .dashboard-amount-box {
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .expense-input-box {
+    padding: 10px;
+    margin: 10px 0;
+    width: 100%;
+  }
+  
+  #add-expense {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .expense-container {
+    background-color: #f4f4f4;
+    padding: 20px;
+  }
+  
+  .expense-box {
+    list-style-type: none;
+    padding: 0;
+  }
+  
